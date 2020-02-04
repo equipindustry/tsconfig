@@ -1,0 +1,47 @@
+{
+  "name": "@equipindustry/tsconfig",
+  "description": "Base tsconfig.json for EquipIndustry TypeScript projects",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/equipindustry/tsconfig.git"
+  },
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "rules",
+    "compiler",
+    "options"
+  ],
+  "author": "Luis Mayta <slovacus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/equipindustry/tsconfig/issues"
+  },
+  "homepage": "https://github.com/equipindustry/tsconfig#readme",
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "prettier": "prettier '**/*.{js?(on),ts?(x),scss,md,yml}' --write --list-different",
+    "prettier-check": "yarn prettier -- --write=false"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@equipindustry/prettierrc": "^0.0.0",
+    "husky": "^4.2.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "semantic-release": "^17.0.2"
+  }
+}
